@@ -8,9 +8,9 @@ import { Component, Input } from '@angular/core';
 
 export class AppComponent {
 
-  @Input() firstName!: string;
-  @Input() lastName!: string;
-  @Input() fullName!: string;
+  @Input() public firstName!: string;
+  @Input() public lastName!: string;
+  @Input() public fullName!: string;
 
   title = 'WW_TypeScript_01';
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppModule } from 'src/app/app.module';
 
 @Component({
   selector: 'app-my-first-component',
