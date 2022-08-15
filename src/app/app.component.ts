@@ -32,8 +32,9 @@ export class AppComponent {
     console.log(pEvent);
   }
 
-  // const printCurrentPosition = async() => {
-  //   const coordinates = await Geolocation.getCurrentPosition();
-  //   console.log('Current position', coordinates);
-  // }
+  async ngOnInit(): Promise<void> {
+    const coordinates = await Geolocation.getCurrentPosition();
+    console.log('Current position', coordinates);
+  }
+
 }
