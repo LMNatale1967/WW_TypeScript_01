@@ -19,6 +19,6 @@ export class UsersDatasService {
       { firstName: "Veronica Anastasia", lastName: "Natale", fullname:"Veronica Anastasia Natale", gender:"Female" },
       { firstName: "Emanuel David", lastName: "Natale", fullname:"Emanuel David Natale", gender:"Female" }
     ]
-  }
-
+  }  
 }
+

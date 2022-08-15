@@ -10,10 +10,10 @@ import { UsersDatasService } from 'src/app/services/users-datas.service';
 
 export class MyFirstComponentComponent implements OnInit {
 
-  users:any;
+  users: any;
 
   constructor(private usersDatas: UsersDatasService) {
-    this.users = usersDatas.users();
+    this.users = usersDatas.users();    
   }
   
   ngOnInit(): void {
