@@ -1,1 +1,9 @@
 <div style="margin-left: 25px;">My-Third-Component Works !</div>
+
+<ul style="margin-left: 25px;">
+    <li *ngFor = "let user of users">
+        <div (click)="displayMyGender(user.gender, $event)">
+            {{user.gender}}
+        </div>
+    </li>
+</ul>

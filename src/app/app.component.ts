@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { async } from '@angular/core/testing';
 import { Geolocation } from '@capacitor/geolocation';
 
 @Component({
@@ -15,22 +14,6 @@ export class AppComponent {
   @Input() public fullName!: string;
 
   title = 'WW_TypeScript_01';
-
-
-  displayMyFirstName(pFirstname:string, pEvent:Event): void {
-    alert ("The firstname is : " + pFirstname);
-    console.log(pEvent);
-  }
-
-  displayMyLastName(pLastName:string, pEvent:Event): void {
-    alert ("The lastname is : " + pLastName);
-    console.log(pEvent);
-  }
-
-  displayMyFullName(pFullName:string, pEvent:Event): void {
-    alert ("The fullname is : " + pFullName);
-    console.log(pEvent);
-  }
 
   async ngOnInit(): Promise<void> {
     const coordinates = await Geolocation.getCurrentPosition();

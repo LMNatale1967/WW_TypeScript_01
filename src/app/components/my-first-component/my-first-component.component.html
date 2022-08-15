@@ -1,1 +1,10 @@
-<div style="margin: 25px">My-First-Component Works !</div>
+
+<div style="margin-left: 25px;">My-First-Component Works !</div>
+
+<ul style="margin-left: 25px;">
+    <li *ngFor = "let user of users">
+        <div (click)="displayMyFirstName(user.firstName, $event)">
+            {{user.firstName}}
+        </div>
+    </li>
+</ul>

@@ -1,1 +1,9 @@
 <div style="margin-left: 25px;">My-Second-Component Works !</div>
+
+<ul style="margin-left: 25px;">
+    <li *ngFor = "let user of users">   
+        <div (click)="displayMyFullName(user.fullname, $event)">
+            {{user.fullname}}
+        </div>
+    </li>
+</ul>
