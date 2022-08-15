@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { async } from '@angular/core/testing';
+import { Geolocation } from '@capacitor/geolocation';
 
 @Component({
   selector: 'app-root',
@@ -29,4 +31,9 @@ export class AppComponent {
     alert ("The fullname is : " + pFullName);
     console.log(pEvent);
   }
+
+  // const printCurrentPosition = async() => {
+  //   const coordinates = await Geolocation.getCurrentPosition();
+  //   console.log('Current position', coordinates);
+  // }
 }
