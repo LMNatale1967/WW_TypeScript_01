@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UsersDatasService } from 'src/app/services/users-datas.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { UsersDatasService } from 'src/app/services/users-datas.service';
 export class MySecondComponentComponent implements OnInit {
 
   users:any;
+  @Input() language_Angular!: String;
 
   constructor(private usersDatas: UsersDatasService) {     
     this.users = usersDatas.users();

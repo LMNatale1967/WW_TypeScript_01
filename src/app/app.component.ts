@@ -9,11 +9,11 @@ import { Geolocation } from '@capacitor/geolocation';
 
 export class AppComponent {
 
-  @Input() public firstName!: string;
-  @Input() public lastName!: string;
-  @Input() public fullName!: string;
-
   title = 'WW_TypeScript_01';
+  language_TypeScript = "TypeScript";
+  language_Angular = "Angular";
+  language_Ionic = "Ionic";
+  language_Firebase = "Firebase";
 
   async ngOnInit(): Promise<void> {
     const coordinates = await Geolocation.getCurrentPosition();

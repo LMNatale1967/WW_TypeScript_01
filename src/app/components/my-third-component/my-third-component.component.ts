@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UsersDatasService } from 'src/app/services/users-datas.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { UsersDatasService } from 'src/app/services/users-datas.service';
 export class MyThirdComponentComponent implements OnInit {
 
   users:any;
+  @Input() language_Ionic!: String;
 
   constructor(private usersDatas: UsersDatasService) {     
     this.users = usersDatas.users();
@@ -23,5 +24,4 @@ export class MyThirdComponentComponent implements OnInit {
     alert ("The gender is : " + pGender);
     console.log(pEvent);
   }
-
 }

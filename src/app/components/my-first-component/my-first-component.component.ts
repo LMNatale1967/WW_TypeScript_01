@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UsersDatasService } from 'src/app/services/users-datas.service';
 
 
@@ -11,9 +11,12 @@ import { UsersDatasService } from 'src/app/services/users-datas.service';
 export class MyFirstComponentComponent implements OnInit {
 
   users: any;
+  @Input() language_TypeScript!: String;
 
-  constructor(private usersDatas: UsersDatasService) {
-    this.users = usersDatas.users();    
+
+  constructor(private pUsersDatas: UsersDatasService) 
+  {
+    this.users = pUsersDatas.users();    
   }
   
   ngOnInit(): void {
@@ -25,3 +28,8 @@ export class MyFirstComponentComponent implements OnInit {
     console.log(pEvent);
   }
 }
+
+function input() {
+  throw new Error('Function not implemented.');
+}
+
